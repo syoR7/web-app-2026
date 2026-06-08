@@ -8,9 +8,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - name: SSH でデプロイ
-        uses: appleboy/ssh-action@v1.0.0
+        uses: appleboy/ssh-action@v4
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
